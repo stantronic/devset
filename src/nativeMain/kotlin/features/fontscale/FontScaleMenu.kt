@@ -1,7 +1,6 @@
-package features
+package features.fontscale
 
-import FontScale
-import State
+import context.State
 import io.white
 import menu.runMenu
 

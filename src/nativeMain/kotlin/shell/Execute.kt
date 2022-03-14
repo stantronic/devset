@@ -1,3 +1,5 @@
+package shell
+
 import kotlinx.cinterop.refTo
 import kotlinx.cinterop.toKString
 import platform.posix.fgets

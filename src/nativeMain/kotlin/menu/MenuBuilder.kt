@@ -46,7 +46,13 @@ class MenuBuilder {
     }
 
     fun withSeparator() {
+        val key = (optionCounter + 0.5).toString()
+        config.items[key] = Separator
+    }
 
+    fun withSubheading(heading: String) {
+        val key = (optionCounter + 0.7).toString()
+        config.items[key] = Subheading(heading)
     }
 }
 
@@ -62,3 +68,4 @@ fun buildMenu(block: MenuBuilder.() -> Unit): Menu {
 fun runMenu(block: MenuBuilder.() -> Unit) {
     buildMenu(block).run()
 }
+

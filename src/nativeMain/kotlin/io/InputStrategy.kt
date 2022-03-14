@@ -27,6 +27,8 @@ object EnterText : InputStrategy {
     }
 }
 
+fun question(text:String) = EnterText(text)
+
 fun getKeyPress(): String {
     val file = popen("bash -c 'read -s -n1 c && printf \"%s\" \"\$c\"'", "r")
 

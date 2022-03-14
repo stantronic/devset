@@ -1,3 +1,5 @@
+package features.fontscale
+
 enum class FontScale(val pointSize: String) {
     SMALL("0.85"),
     DEFAULT("1.0"),
