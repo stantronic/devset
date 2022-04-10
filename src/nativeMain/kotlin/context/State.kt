@@ -14,8 +14,10 @@ class State(val adb: Adb) {
             val adb = Adb.load(currentUser)
             return State(adb).apply {
                 user = currentUser
-                adb.getFontSize(this)
-                adb.getScreenDimensions(this)
+                if (adb.connected) {
+                    adb.getFontSize(this)
+                    adb.getScreenDimensions(this)
+                }
             }
         }
     }
